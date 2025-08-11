@@ -1,0 +1,32 @@
+{
+	"nodes":[
+		{"id":"fdf0ddc91166abd9","type":"text","text":"table","x":-123,"y":70,"width":250,"height":60},
+		{"id":"ae5668fd646f9212","type":"text","text":"figure\n","x":220,"y":70,"width":250,"height":60},
+		{"id":"3c90674045894814","type":"text","text":"product manual:\nmultimodal pdf","x":-159,"y":-243,"width":250,"height":60},
+		{"id":"b4d054194a9cb01d","type":"text","text":"technique","x":343,"y":-230,"width":250,"height":60},
+		{"id":"96652fc46b3ad035","type":"text","text":"RAG","x":747,"y":-414,"width":250,"height":60},
+		{"id":"2f8a27e699196112","type":"file","file":"abschluss/RAG 用于企业内部的问答知识库搭建和管理.md","x":1147,"y":-588,"width":400,"height":400},
+		{"id":"aa8fce3a1a609f2b","type":"file","file":"abschluss/RAG & agent.md","x":1220,"y":-80,"width":400,"height":400},
+		{"id":"59a706c21c2006a4","type":"text","text":"(optional) LLM LoRA fine tuning\n\n有人用了微调, 说好用, 也有人说不合适. 在论文中需要深入分析","x":739,"y":320,"width":258,"height":180},
+		{"id":"b7f80152b394a51c","type":"text","text":"agent","x":800,"y":-20,"width":250,"height":60},
+		{"id":"5f33851ffd975978","type":"text","text":"text","x":-460,"y":70,"width":250,"height":60},
+		{"id":"9e318b2fe06d8b69","x":-169,"y":-640,"width":409,"height":191,"type":"text","text":" deploy as web app\n --> 硬件性能受限, 可能难以实现\n - --> 可以先把向量数据库搭建好, web ui上不允许用户再次上传pdf, 而是只能针对当前pdf进行提问\n - "},
+		{"id":"53d8ed1ead9b0796","x":-819,"y":-497,"width":250,"height":157,"color":"3","type":"text","text":"Soll-Ist Vergleich:\n- 设置对比试验, 首先根据文档制定多个问题, 看RAG系统的准确率"}
+	],
+	"edges":[
+		{"id":"0e37cc282d008401","fromNode":"3c90674045894814","fromSide":"bottom","toNode":"5f33851ffd975978","toSide":"top","label":"contains"},
+		{"id":"d14ee1efd3d05623","fromNode":"3c90674045894814","fromSide":"bottom","toNode":"fdf0ddc91166abd9","toSide":"top","label":"contains"},
+		{"id":"ac946d6869ebb07c","fromNode":"3c90674045894814","fromSide":"bottom","toNode":"ae5668fd646f9212","toSide":"top","label":"contains"},
+		{"id":"27f69df66842e3c8","fromNode":"3c90674045894814","fromSide":"right","toNode":"b4d054194a9cb01d","toSide":"left","label":"needs"},
+		{"id":"04e9a73ede33f3b0","fromNode":"b4d054194a9cb01d","fromSide":"right","toNode":"96652fc46b3ad035","toSide":"left"},
+		{"id":"9bed476816eb797e","fromNode":"b4d054194a9cb01d","fromSide":"right","toNode":"b7f80152b394a51c","toSide":"left"},
+		{"id":"93b4baf89b30e710","fromNode":"b4d054194a9cb01d","fromSide":"right","toNode":"59a706c21c2006a4","toSide":"left"},
+		{"id":"dfe8034e11012d4d","fromNode":"96652fc46b3ad035","fromSide":"right","toNode":"2f8a27e699196112","toSide":"left"},
+		{"id":"1c1bf1c8c64a3098","fromNode":"b7f80152b394a51c","fromSide":"right","toNode":"aa8fce3a1a609f2b","toSide":"left"},
+		{"id":"3bc011c311e81dc6","fromNode":"5f33851ffd975978","fromSide":"left","toNode":"96652fc46b3ad035","toSide":"top"},
+		{"id":"e347f2157499c60b","fromNode":"fdf0ddc91166abd9","fromSide":"bottom","toNode":"b7f80152b394a51c","toSide":"top"},
+		{"id":"c9dc7f699d638499","fromNode":"ae5668fd646f9212","fromSide":"bottom","toNode":"b7f80152b394a51c","toSide":"bottom"},
+		{"id":"8a1f71989d65f587","fromNode":"3c90674045894814","fromSide":"top","toNode":"9e318b2fe06d8b69","toSide":"bottom"},
+		{"id":"5111238e415038c9","fromNode":"3c90674045894814","fromSide":"left","toNode":"53d8ed1ead9b0796","toSide":"right"}
+	]
+}

@@ -1,0 +1,35 @@
+
+
+作者：韦东东  
+链接：https://www.zhihu.com/question/637421964/answer/1906519426305623583  
+来源：知乎  
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。  
+  
+
+## **三种技术选型回顾**
+
+老规矩，在正式开始介绍前，我们再来回顾下当前市场上企业 RAG 知识库落地的三种主流路径。
+
+**_1.1_**
+
+### **直接使用高层级开源框架**
+
+这类框架如 RAGFlow, [Dify](https://zhida.zhihu.com/search?content_id=727565163&content_type=Answer&match_order=1&q=Dify&zd_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ6aGlkYV9zZXJ2ZXIiLCJleHAiOjE3NTUwOTM1MzgsInEiOiJEaWZ5IiwiemhpZGFfc291cmNlIjoiZW50aXR5IiwiY29udGVudF9pZCI6NzI3NTY1MTYzLCJjb250ZW50X3R5cGUiOiJBbnN3ZXIiLCJtYXRjaF9vcmRlciI6MSwiemRfdG9rZW4iOm51bGx9.Z4XIGuvHV8d5ZPKYp7yDpIri01_0wsUFPrdjiPGZa04&zhida_source=entity), [FastGPT](https://zhida.zhihu.com/search?content_id=727565163&content_type=Answer&match_order=1&q=FastGPT&zd_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ6aGlkYV9zZXJ2ZXIiLCJleHAiOjE3NTUwOTM1MzgsInEiOiJGYXN0R1BUIiwiemhpZGFfc291cmNlIjoiZW50aXR5IiwiY29udGVudF9pZCI6NzI3NTY1MTYzLCJjb250ZW50X3R5cGUiOiJBbnN3ZXIiLCJtYXRjaF9vcmRlciI6MSwiemRfdG9rZW4iOm51bGx9.lvSvVtzCc5_2S7SJDb6dyvnMTvLkgp54NfMY9pcl3YQ&zhida_source=entity) 等，主要特点是提供相对完整、开箱即用的 RAG 工作流，目标是简化 RAG 应用的搭建过程，降低开发门槛。反之，劣势主要是定制化和灵活性受限，深度优化和集成特定组件时复杂度较高。
+
+**_1.2_**
+
+### **底层开发框架自主开发**
+
+这类框架包括 [LangChain](https://zhida.zhihu.com/search?content_id=727565163&content_type=Answer&match_order=1&q=LangChain&zd_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ6aGlkYV9zZXJ2ZXIiLCJleHAiOjE3NTUwOTM1MzgsInEiOiJMYW5nQ2hhaW4iLCJ6aGlkYV9zb3VyY2UiOiJlbnRpdHkiLCJjb250ZW50X2lkIjo3Mjc1NjUxNjMsImNvbnRlbnRfdHlwZSI6IkFuc3dlciIsIm1hdGNoX29yZGVyIjoxLCJ6ZF90b2tlbiI6bnVsbH0.uRcNMtpmnQoKxKhGdQzQqnNYEY4EciqRvscDcAzYBts&zhida_source=entity), [LlamaIndex](https://zhida.zhihu.com/search?content_id=727565163&content_type=Answer&match_order=1&q=LlamaIndex&zd_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ6aGlkYV9zZXJ2ZXIiLCJleHAiOjE3NTUwOTM1MzgsInEiOiJMbGFtYUluZGV4IiwiemhpZGFfc291cmNlIjoiZW50aXR5IiwiY29udGVudF9pZCI6NzI3NTY1MTYzLCJjb250ZW50X3R5cGUiOiJBbnN3ZXIiLCJtYXRjaF9vcmRlciI6MSwiemRfdG9rZW4iOm51bGx9.i4eyfd8O0ZlNZsb3N9wjuIMr7WS6RBS0klyY5TBr5RY&zhida_source=entity), [Haystack](https://zhida.zhihu.com/search?content_id=727565163&content_type=Answer&match_order=1&q=Haystack&zd_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ6aGlkYV9zZXJ2ZXIiLCJleHAiOjE3NTUwOTM1MzgsInEiOiJIYXlzdGFjayIsInpoaWRhX3NvdXJjZSI6ImVudGl0eSIsImNvbnRlbnRfaWQiOjcyNzU2NTE2MywiY29udGVudF90eXBlIjoiQW5zd2VyIiwibWF0Y2hfb3JkZXIiOjEsInpkX3Rva2VuIjpudWxsfQ.SKURUAuMmbgBZo6wR7aQ_4bhjRJyoq0SNAgF6ETA6eg&zhida_source=entity) 等，都提供了一系列模块化的构建块、工具和接口。开发者可以根据需求灵活组合和编排 RAG 流程的各个环节（如数据加载、文本分割、嵌入、向量存储、检索策略、LLM 调用、记忆管理、Agent 构建等）。
+
+优势很明显就是灵度灵活，定制化能力强，能够针对特定业务场景进行深度优化和集成。适合对 RAG 流程有精细化控制需求的企业。反之劣势就是需要更多的开发工作量和技术深度。
+
+**_1.3_**
+
+### **云厂商 MaaS 平台方案**
+
+如[阿里云百炼](https://zhida.zhihu.com/search?content_id=727565163&content_type=Answer&match_order=1&q=%E9%98%BF%E9%87%8C%E4%BA%91%E7%99%BE%E7%82%BC&zd_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ6aGlkYV9zZXJ2ZXIiLCJleHAiOjE3NTUwOTM1MzgsInEiOiLpmL_ph4zkupHnmb7ngrwiLCJ6aGlkYV9zb3VyY2UiOiJlbnRpdHkiLCJjb250ZW50X2lkIjo3Mjc1NjUxNjMsImNvbnRlbnRfdHlwZSI6IkFuc3dlciIsIm1hdGNoX29yZGVyIjoxLCJ6ZF90b2tlbiI6bnVsbH0.4ybMdFCi_2oPeEZMvr52jxpgG4RPLXvapFnoO2ddBbA&zhida_source=entity), [百度智能云千帆](https://zhida.zhihu.com/search?content_id=727565163&content_type=Answer&match_order=1&q=%E7%99%BE%E5%BA%A6%E6%99%BA%E8%83%BD%E4%BA%91%E5%8D%83%E5%B8%86&zd_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ6aGlkYV9zZXJ2ZXIiLCJleHAiOjE3NTUwOTM1MzgsInEiOiLnmb7luqbmmbrog73kupHljYPluIYiLCJ6aGlkYV9zb3VyY2UiOiJlbnRpdHkiLCJjb250ZW50X2lkIjo3Mjc1NjUxNjMsImNvbnRlbnRfdHlwZSI6IkFuc3dlciIsIm1hdGNoX29yZGVyIjoxLCJ6ZF90b2tlbiI6bnVsbH0.bZvzIHon5OsioHKD0FTQlNCTZfdsIP5z-sqwsp4tdsY&zhida_source=entity), AWS Bedrock, Google Vertex AI Search 等的私有化部署方案，无论是国内还是国外的这些云服务商，都是把 RAG 相关的能力封装成服务或提供私有化部署包，通常与自家的大模型、计算资源、数据存储等深度集成。一般也会提供模型选择、微调、部署、监控等一站式服务。
+
+采用这种方案通常能提供稳定的基础设施、便捷的模型管理和部署、以及与其他云服务的良好兼容性。对于已经深度使用特定云生态的企业来说，集成成本较低。但劣势就如同使用大模型一体机一样，可能存在厂商锁定的风险，跨云迁移或集成非该厂商的服务可能会比较复杂。当然，费用和灵活性也需要考虑。
+
+_总结来说，实际生产场景中以上三种选择并非完全互斥，例如以底层框架为基础，但借助云厂商的部分模型服务或基础设施也是中目前常见的组合。_
