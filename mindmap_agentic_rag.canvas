@@ -11,7 +11,11 @@
 		{"id":"b7f80152b394a51c","type":"text","text":"agent","x":800,"y":-20,"width":250,"height":60},
 		{"id":"5f33851ffd975978","type":"text","text":"text","x":-460,"y":70,"width":250,"height":60},
 		{"id":"9e318b2fe06d8b69","x":-169,"y":-640,"width":409,"height":191,"type":"text","text":" deploy as web app\n --> 硬件性能受限, 可能难以实现\n - --> 可以先把向量数据库搭建好, web ui上不允许用户再次上传pdf, 而是只能针对当前pdf进行提问\n - "},
-		{"id":"53d8ed1ead9b0796","x":-819,"y":-497,"width":250,"height":157,"color":"3","type":"text","text":"Soll-Ist Vergleich:\n- 设置对比试验, 首先根据文档制定多个问题, 看RAG系统的准确率"}
+		{"id":"53d8ed1ead9b0796","x":-819,"y":-497,"width":250,"height":157,"color":"3","type":"text","text":"Soll-Ist Vergleich:\n- 设置对比试验, 首先根据文档制定多个问题, 看RAG系统的准确率"},
+		{"id":"3ca3be14820a97cd","x":-971,"y":-884,"width":554,"height":244,"type":"text","text":"要对比Soll IST, 还要根据文档内容想出查询用的问题和答案\n[[Augmented Question-guided Retrieval (AQgR) of Indian Case Law with LLM, RAG, and Structured Summaries.pdf]]\n![[Pasted image 20250812144655.png]]\n"},
+		{"id":"0d027659a147b233","x":-1680,"y":-1000,"width":600,"height":720,"type":"text","text":"另一种对比方法:\n\n![[Pasted image 20250812145532.png]]"},
+		{"id":"6e56a56d7617b343","x":53,"y":527,"width":686,"height":413,"type":"text","text":"[[CF-RAG -  A Dataset and Method for Carbon Footprint QA Using Retrieval-Augmented Generation.pdf]]\n本文作者在discussion中提到了他没有完成多模态pdf的解析, 尤其是当一些问题涉及结合文本和图像进行综合并回答的时候\n\n--> 考虑到技术难度, 可以考虑让系统根据图像和表格的说明作出判断, 看问题是否涉及图像和表格, 如果是, 则返回问题涉及的表格/图像\n\n![[Pasted image 20250812145800.png]]\n"},
+		{"id":"9acb82fa7104f779","x":-1539,"y":-73,"width":359,"height":203,"type":"text","text":"open book question answering:\n如果查看2022年以前的文章, 则不难发现在RAG技术出现之前, 研究者就已经在用各种方法尝试实现RAG系统的功能了"}
 	],
 	"edges":[
 		{"id":"0e37cc282d008401","fromNode":"3c90674045894814","fromSide":"bottom","toNode":"5f33851ffd975978","toSide":"top","label":"contains"},
@@ -27,6 +31,11 @@
 		{"id":"e347f2157499c60b","fromNode":"fdf0ddc91166abd9","fromSide":"bottom","toNode":"b7f80152b394a51c","toSide":"top"},
 		{"id":"c9dc7f699d638499","fromNode":"ae5668fd646f9212","fromSide":"bottom","toNode":"b7f80152b394a51c","toSide":"bottom"},
 		{"id":"8a1f71989d65f587","fromNode":"3c90674045894814","fromSide":"top","toNode":"9e318b2fe06d8b69","toSide":"bottom"},
-		{"id":"5111238e415038c9","fromNode":"3c90674045894814","fromSide":"left","toNode":"53d8ed1ead9b0796","toSide":"right"}
+		{"id":"5111238e415038c9","fromNode":"3c90674045894814","fromSide":"left","toNode":"53d8ed1ead9b0796","toSide":"right"},
+		{"id":"1c5a5a8cd10996aa","fromNode":"53d8ed1ead9b0796","fromSide":"top","toNode":"3ca3be14820a97cd","toSide":"bottom"},
+		{"id":"f7e398bfd0fe70fd","fromNode":"53d8ed1ead9b0796","fromSide":"left","toNode":"0d027659a147b233","toSide":"right"},
+		{"id":"bf67a11992a26de2","fromNode":"ae5668fd646f9212","fromSide":"bottom","toNode":"6e56a56d7617b343","toSide":"top"},
+		{"id":"d8d003e69cdd8dd4","fromNode":"fdf0ddc91166abd9","fromSide":"bottom","toNode":"6e56a56d7617b343","toSide":"top"},
+		{"id":"3c7a48bcd2992a8e","fromNode":"3c90674045894814","fromSide":"bottom","toNode":"9acb82fa7104f779","toSide":"top"}
 	]
 }
